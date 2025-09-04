@@ -1,4 +1,4 @@
-
+```markdown
 # Titanic Survival Model
 
 Predict whether a passenger survived the Titanic disaster using **scikit-learn**.  
@@ -20,7 +20,7 @@ This project demonstrates a complete ML workflow: data preprocessing, feature en
 ---
 
 ## Project Structure
-
+```
 
 titanic-survival-model/
 │── data/
@@ -40,26 +40,26 @@ titanic-survival-model/
 │── requirements.txt
 └── README.md
 
-
+````
 
 ---
 
 ## How to Run
 
 ### 1) Clone the repository
-
+```bash
 git clone https://github.com/ahmaddkheir/titanic-survival-model.git
 cd titanic-survival-model
-
+````
 
 ### 2) Create and activate a virtual environment
 
 **Mac/Linux**
 
-
+```bash
 python -m venv virtual
 source virtual/bin/activate
-
+```
 
 **Windows (PowerShell)**
 
@@ -70,15 +70,15 @@ virtual\Scripts\Activate.ps1
 
 ### 3) Install dependencies
 
-
+```bash
 pip install -r requirements.txt
-
+```
 
 ### 4) Launch the notebook and run end-to-end
 
-
+```bash
 jupyter notebook notebooks/main.ipynb
-
+```
 
 * Run all cells to:
 
@@ -100,5 +100,13 @@ jupyter notebook notebooks/main.ipynb
 
 ---
 
+## Notes
 
+* Place the CSV files in `data/` as listed above.
+* The notebook saves artifacts (e.g., trained pipeline and predictions) into `models/` and `outputs/`.
+* If you encounter issues with `xgboost`, you can comment out its usage in the notebook and proceed with scikit-learn models.
 
+---
+
+```
+```
