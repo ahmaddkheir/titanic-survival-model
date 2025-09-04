@@ -1,30 +1,38 @@
-```markdown
+You’ve got mismatched/overlapping code fences. You wrapped the whole file in `markdown … ` and then added more fenced blocks inside (`plaintext, `bash, etc.). That creates unclosed fences and breaks saving/preview.
+
+Fix: don’t wrap the entire README in a fence. Only fence the snippets. Also remove the stray `----` that sat inside a code block and the accidental \`\`\`\` (four backticks).
+
+Here’s a clean, ready-to-paste `README.md`:
+
 # Titanic Survival Model
 
-Predict whether a passenger survived the Titanic disaster using **scikit-learn**.  
+Predict whether a passenger survived the Titanic disaster using **scikit-learn**.
 This project demonstrates a complete ML workflow: data preprocessing, feature engineering, model training, evaluation, and exporting a trained pipeline for inference.
 
 ---
 
 ## Overview
-- **Goal:** Predict survival of Titanic passengers (`Survived`: 0 = did not survive, 1 = survived).
-- **Dataset:** Titanic dataset (train/test CSVs).
-- **Approach:**
-  - Exploratory Data Analysis (EDA).
-  - Feature engineering (e.g., extract `Title` from `Name`, impute missing `Age`, encode categoricals).
-  - Preprocessing with `ColumnTransformer` and `Pipeline`.
-  - Model comparison: Logistic Regression, Random Forest, XGBoost.
-  - Hyperparameter tuning with `GridSearchCV`.
-- **Final model:** Logistic Regression (`C=10`, `penalty=l2`, `solver=lbfgs`).
+
+* **Goal:** Predict survival of Titanic passengers (`Survived`: 0 = did not survive, 1 = survived).
+* **Dataset:** Titanic dataset (train/test CSVs).
+* **Approach:**
+
+  * Exploratory Data Analysis (EDA).
+  * Feature engineering (e.g., extract `Title` from `Name`, impute missing `Age`, encode categoricals).
+  * Preprocessing with `ColumnTransformer` and `Pipeline`.
+  * Model comparison: Logistic Regression, Random Forest, XGBoost.
+  * Hyperparameter tuning with `GridSearchCV`.
+* **Final model:** Logistic Regression (`C=10`, `penalty=l2`, `solver=lbfgs`).
 
 ---
 
 ## 📂 Project Structure
+
 ```plaintext
 titanic-survival-model/
 │── data/
 │   ├── Titanic-Dataset.csv     # training data
-│   ├── titanic_test.csv        # test data
+│   └── titanic_test.csv        # test data
 │
 │── notebooks/
 │   └── main.ipynb              # Jupyter notebook (EDA + training)
@@ -37,16 +45,19 @@ titanic-survival-model/
 │
 │── .gitignore
 │── requirements.txt
-│── README.md
+└── README.md
+```
 
 ---
 
-### 1) how to run
+## 🚀 How to Run
+
+### 1) Clone the repository
+
 ```bash
 git clone https://github.com/ahmaddkheir/titanic-survival-model.git
 cd titanic-survival-model
-````
-
+```
 
 ### 2) Create and activate a virtual environment
 
@@ -76,13 +87,13 @@ pip install -r requirements.txt
 jupyter notebook notebooks/main.ipynb
 ```
 
-* Run all cells to:
+Run all cells to:
 
-  * explore and clean the data,
-  * engineer features,
-  * train and tune models,
-  * export the best pipeline,
-  * generate `outputs/submission.csv`.
+* explore and clean the data,
+* engineer features,
+* train and tune models,
+* export the best pipeline,
+* generate `outputs/submission.csv`.
 
 ---
 
@@ -96,13 +107,4 @@ jupyter notebook notebooks/main.ipynb
 
 ---
 
-## Notes
 
-* Place the CSV files in `data/` as listed above.
-* The notebook saves artifacts (e.g., trained pipeline and predictions) into `models/` and `outputs/`.
-* If you encounter issues with `xgboost`, you can comment out its usage in the notebook and proceed with scikit-learn models.
-
----
-
-```
-```
