@@ -1,8 +1,4 @@
-You’ve got mismatched/overlapping code fences. You wrapped the whole file in `markdown … ` and then added more fenced blocks inside (`plaintext, `bash, etc.). That creates unclosed fences and breaks saving/preview.
 
-Fix: don’t wrap the entire README in a fence. Only fence the snippets. Also remove the stray `----` that sat inside a code block and the accidental \`\`\`\` (four backticks).
-
-Here’s a clean, ready-to-paste `README.md`:
 
 # Titanic Survival Model
 
