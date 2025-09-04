@@ -41,13 +41,12 @@ titanic-survival-model/
 
 ---
 
-## How to Run
-
-### 1) Clone the repository
+### 1) how to run
 ```bash
 git clone https://github.com/ahmaddkheir/titanic-survival-model.git
 cd titanic-survival-model
 ````
+
 
 ### 2) Create and activate a virtual environment
 
