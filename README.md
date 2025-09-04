@@ -19,28 +19,25 @@ This project demonstrates a complete ML workflow: data preprocessing, feature en
 
 ---
 
-## Project Structure
-```
-
+## 📂 Project Structure
+```plaintext
 titanic-survival-model/
 │── data/
-│   ├── Titanic-Dataset.csv        # training data
-│   └── titanic\_test.csv           # test data
+│   ├── Titanic-Dataset.csv     # training data
+│   ├── titanic_test.csv        # test data
 │
 │── notebooks/
-│   └── main.ipynb                 # EDA + training (run this)
+│   └── main.ipynb              # Jupyter notebook (EDA + training)
 │
 │── models/
-│   └── save\_model.py              # helper functions to save/load pipeline
+│   └── save_model.py           # helper functions to save/load pipeline
 │
 │── outputs/
-│   └── submission.csv             # predictions for test set (generated)
+│   └── submission.csv          # predictions for test set
 │
 │── .gitignore
 │── requirements.txt
-└── README.md
-
-````
+│── README.md
 
 ---
 
